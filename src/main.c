@@ -6,12 +6,21 @@
 #include <sys/unistd.h>
 #include "asp/display.h"
 #include "asp/input.h"
+#include "pax_codecs.h"
 #include "pax_gfx.h"
+#include "pax_types.h"
 #include "pgame_layer.h"
 #include "pgame_object.h"
 #include "pgame_scene.h"
 
 static bool load_texture(pax_buf_t* texture_out, char const* file) {
+    char pathbuf[64];
+    snprintf(pathbuf, sizeof(pathbuf) - 1, "/int/apps/net.scheffers.robot.pgamedemo/%s", file);
+    FILE* fd = fopen(pathbuf, "rb");
+    if (!fd) return false;
+    bool res = pax_decode_png_fd(texture_out, fd, PAX_BUF_8_2222ARGB, 0);
+    fclose(fd);
+    return res;
 }
 
 int main(int argc, char** argv) {

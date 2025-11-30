@@ -17,6 +17,7 @@ build:
 
 .PHONY: install
 install: build
+	$(BADGELINK) fs mkdir  $(INSTALLDIR)
 	$(BADGELINK) fs upload $(INSTALLDIR)/metadata.json metadata.json
 	$(BADGELINK) fs upload $(INSTALLDIR)/main.elf build/libmain.so
 	$(BADGELINK) fs upload $(INSTALLDIR)/dirt.png assets/dirt.png
