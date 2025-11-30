@@ -2,5 +2,6 @@
     "clangd.arguments": [
         "--compile-commands-dir=build",
         "--query-driver=/**/riscv32-esp-elf/bin/riscv32-esp-elf-cc"
-    ]
+    ],
+    "editor.formatOnSave": true
 }

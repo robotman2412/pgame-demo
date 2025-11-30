@@ -13,3 +13,6 @@ project(badge_elf_app C)
 add_library(main SHARED
     src/main.c
 )
+
+add_subdirectory(pgame)
+target_link_libraries(main PUBLIC pgame)

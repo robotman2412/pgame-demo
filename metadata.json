@@ -1,8 +1,9 @@
 {
-    "name": "BadgeELF template",
-    "description": "Template application",
+    "name": "Puzzle Game",
+    "description": "A puzzle game to test and demonstrate the PGAME game engine.",
     "categories": [
-        "demo"
+        "demo",
+        "games"
     ],
     "version": "0.0.1",
     "icon": {
@@ -11,7 +12,7 @@
         "64x64": "icon64.png"
     },
     "author": "Julian Scheffers",
-    "license_type": "CC0-1.0",
+    "license_type": "MIT",
     "application": [
         {
             "targets": [
